@@ -1,1 +1,9 @@
 .vscode
+*.asm
+*.gb
+*.ihx
+*.lst
+*.map
+*.noi
+*.o
+*.sym

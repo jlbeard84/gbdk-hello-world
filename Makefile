@@ -1,16 +1,6 @@
-AS = lcc -c
-CC = lcc -Wa-l -Wl-m
-
-BIN = hello_world.gb
-OBJS = hello_world.o
-
-all: $(BIN)
-
-%.s: %.ms
-	maccer -o $@ $<
-
-$(BIN): $(OBJS)
-	$(CC) -o $(BIN) $(OBJS)
+all:
+	/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -c -o hello_world.o hello_world.c
+	/opt/gbdk/bin/lcc -Wa-l -Wl-m -Wl-j -o hello_world.gb hello_world.o
 
 clean:
-	rm -rf $(BIN) $(OBJS) *~
+	rm -rf *.o *.lst *.map *.gb *~ *.rel *.cdb *.ihx *.lnk *.sym *.asm *.noi
