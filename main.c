@@ -22,7 +22,7 @@ void init() {
     DISPLAY_ON;
     set_bkg_data(0, 47, alpha);
     set_bkg_tiles(0,0,20,18,blankScreen);
-    set_bkg_tiles(0,6,10,2,helloWorld);
+    set_bkg_tiles(7,8,5,2,helloWorld);
 }
 
 void updateSwitches() {
