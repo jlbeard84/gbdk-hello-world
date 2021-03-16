@@ -15,7 +15,8 @@ void drawPlayer();
 UINT8 playerPosition[2];
 enum PlayerDirection playerDirection = Down;
 
-void main() {
+void main() 
+{
     init();
 
     while (1) {
@@ -51,22 +52,26 @@ void updateSwitches() {
 }
 
 void checkInput() {
-    if (joypad() & J_UP && playerPosition[1] > 16) {
+    if (joypad() & J_UP && playerPosition[1] > 16) 
+    {
 		playerPosition[1]--;
         playerDirection = Up;
 	}
 
-	if (joypad() & J_DOWN && playerPosition[1] < 136) {
+	if (joypad() & J_DOWN && playerPosition[1] < 136) 
+    {
 		playerPosition[1]++;
         playerDirection = Down;
 	}
 
-	if (joypad() & J_LEFT && playerPosition[0] > 8) {
+	if (joypad() & J_LEFT && playerPosition[0] > 8) 
+    {
 		playerPosition[0]--;
         playerDirection = Left;
 	}	
 	
-	if (joypad() & J_RIGHT && playerPosition[0] < 152) {
+	if (joypad() & J_RIGHT && playerPosition[0] < 152) 
+    {
 		playerPosition[0]++;
         playerDirection = Right;
 	}
